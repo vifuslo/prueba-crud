@@ -1,0 +1,10 @@
+<h2>Items</h2>
+<ul>
+  <li *ngFor="let item of items">
+    {{ item.name }}
+    <button (click)="deleteItem(item.id)">Delete</button>
+    <a [routerLink]="['/item', item.id]">Details</a>
+    <a [routerLink]="['/item/edit', item.id]">Edit</a>
+  </li>
+</ul>
+<a routerLink="/item/add">Add New Item</a>
